@@ -4,7 +4,13 @@ import { ThemeContext } from "../context/ThemeContext"; // Import the ThemeConte
 
 export default function ButtonMode() {
   // Use the context to get the current theme and the toggle function
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
+
+  if (!themeContext) {
+    return null; // or handle the null case appropriately
+  }
+
+  const { isDarkMode, toggleTheme } = themeContext;
 
   return (
     <button

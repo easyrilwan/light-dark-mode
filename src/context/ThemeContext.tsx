@@ -1,10 +1,21 @@
 import { createContext, useState, useEffect } from "react";
 
+interface ThemeContextType {
+  isDarkMode: boolean;
+  toggleTheme: () => void;
+}
+
 // Create the ThemeContext with default value
-export const ThemeContext = createContext();
+export const ThemeContext = createContext<ThemeContextType | null>(null);
 
 // ThemeProvider to wrap around the app and provide the context
-export const ThemeProvider = ({ children }) => {
+import { ReactNode } from "react";
+
+interface ThemeProviderProps {
+  children: ReactNode;
+}
+
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   // Check initial theme preference from localStorage or system preference
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.theme === "dark" ||
