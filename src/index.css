@@ -2,8 +2,21 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* 
+  * Applies a smooth color transition to all elements, including pseudo-elements.
+  * This ensures background and text color changes animate when switching themes.
+ */
 *,
 *::before,
 *::after {
-  @apply transition-colors duration-300;
+  @apply transition-colors duration-500;
 }
+
+/* 
+  * To ensure Tailwind's transition duration takes effect,
+  * use `transition` along with `!duration-[value]` to override conflicting styles.
+  
+  * NOTE: The `!` (important) modifier is necessary to override Tailwind's default styles.
+
+  <!-------------- THANK YOU FOR YOUR ATTENTION -------------->
+ */

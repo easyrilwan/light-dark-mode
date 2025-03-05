@@ -61,7 +61,7 @@ export default function ButtonMode() {
         {/*Button toggle between Light/Dark Mode*/}
         <button
           onClick={handleThemeToggle}
-          className="mr-2 size-fit cursor-pointer rounded-xl bg-gray-200 p-2 transition-colors duration-900 focus:outline-2 focus:outline-offset-3 focus:outline-violet-500 active:bg-violet-700 dark:bg-gray-700"
+          className="mr-2 size-fit cursor-pointer rounded-xl bg-gray-200 p-2 transition-colors !duration-900 focus:outline-2 focus:outline-offset-3 focus:outline-violet-500 active:bg-violet-700 dark:bg-gray-700"
         >
           {isDarkMode ? "🌙" : "☀️"}
         </button>
@@ -69,7 +69,7 @@ export default function ButtonMode() {
         {/* OS Preference */}
         <button
           onClick={handleResetTheme}
-          className="mr-2 w-fit cursor-pointer rounded-xl bg-gray-300 p-2 dark:bg-gray-800 dark:text-neutral-200"
+          className="mr-2 w-fit cursor-pointer rounded-xl bg-gray-300 p-2 active:bg-gray-100 dark:bg-gray-800 dark:text-neutral-200 dark:active:bg-gray-600"
         >
           Reset Theme Preference
         </button>
@@ -88,24 +88,12 @@ export default function ButtonMode() {
             handleResetTheme();
           }
         }}
-        className="right-3 mr-2 w-15 cursor-pointer rounded-xl bg-gray-200 p-2 focus:to-blue-900 focus:outline-2 focus:outline-offset-4 focus:outline-violet-500 active:bg-violet-700 dark:bg-gray-700 dark:text-gray-200"
+        className="right-3 mr-2 w-15 cursor-pointer rounded-xl bg-gray-200 p-2 focus:outline-2 focus:outline-offset-4 focus:outline-violet-500 active:bg-violet-700 dark:bg-gray-700 dark:text-gray-200"
         value={isDarkMode ? "dark" : "light"}
       >
-        <option value="light" className="w-fit">
-          ☀️
-        </option>
-        <option value="dark" className="w-fit">
-          🌙
-        </option>
-        <option value="system" className="w-fit">
-          System Preference
-        </option>
-      </select>
-
-      <select name="" id="">
-        <option value="">A</option>
-        <option value="">B</option>
-        <option value="">C</option>
+        <option value="light">☀️</option>
+        <option value="dark">🌙</option>
+        <option value="system">System Preference</option>
       </select>
     </div>
   );

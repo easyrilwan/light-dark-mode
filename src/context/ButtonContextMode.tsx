@@ -15,7 +15,7 @@ export default function ButtonMode() {
   return (
     <button
       onClick={toggleTheme} // Toggle theme when the button is clicked
-      className="mr-2 w-full cursor-pointer rounded-xl bg-gray-200 p-2 dark:bg-gray-700 dark:text-neutral-200"
+      className="focus:out-of-range: mr-2 w-full cursor-pointer rounded-xl bg-gray-200 p-2 focus:outline-2 focus:outline-offset-4 focus:outline-lime-500 active:bg-lime-200 dark:bg-gray-700 dark:text-neutral-200 dark:active:bg-lime-700"
     >
       {isDarkMode ? "Light Mode" : "Dark Mode"}
     </button>
