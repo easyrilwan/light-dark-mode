@@ -61,9 +61,9 @@ export default function ButtonMode() {
         {/*Button toggle between Light/Dark Mode*/}
         <button
           onClick={handleThemeToggle}
-          className="mr-2 size-fit cursor-pointer rounded-xl bg-gray-700 p-2 transition-colors duration-900 focus:outline-2 focus:outline-offset-3 focus:outline-violet-500 active:bg-violet-700 dark:bg-gray-200"
+          className="mr-2 size-fit cursor-pointer rounded-xl bg-gray-200 p-2 transition-colors duration-900 focus:outline-2 focus:outline-offset-3 focus:outline-violet-500 active:bg-violet-700 dark:bg-gray-700"
         >
-          {isDarkMode ? "☀️" : "🌙"}
+          {isDarkMode ? "🌙" : "☀️"}
         </button>
 
         {/* OS Preference */}
@@ -88,12 +88,24 @@ export default function ButtonMode() {
             handleResetTheme();
           }
         }}
-        className="right-3 mr-2 w-14 cursor-pointer rounded-xl bg-gray-700 p-2 focus:to-blue-900 focus:outline-2 focus:outline-offset-4 focus:outline-violet-500 active:bg-violet-700 dark:bg-gray-200"
+        className="right-3 mr-2 w-15 cursor-pointer rounded-xl bg-gray-200 p-2 focus:to-blue-900 focus:outline-2 focus:outline-offset-4 focus:outline-violet-500 active:bg-violet-700 dark:bg-gray-700 dark:text-gray-200"
         value={isDarkMode ? "dark" : "light"}
       >
-        <option value="dark">☀️</option>
-        <option value="light">🌙</option>
-        <option value="system">System Preference</option>
+        <option value="light" className="w-fit">
+          ☀️
+        </option>
+        <option value="dark" className="w-fit">
+          🌙
+        </option>
+        <option value="system" className="w-fit">
+          System Preference
+        </option>
+      </select>
+
+      <select name="" id="">
+        <option value="">A</option>
+        <option value="">B</option>
+        <option value="">C</option>
       </select>
     </div>
   );

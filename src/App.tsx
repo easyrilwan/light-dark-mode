@@ -6,8 +6,8 @@ import { ThemeProvider } from "./context/ThemeContext";
 export default function App() {
   return (
     <ThemeProvider>
-      <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gray-400 dark:bg-stone-400">
-        <h1 className="text-3xl font-extrabold dark:text-sky-500">Welcome</h1>
+      <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gray-400 dark:bg-stone-600">
+        <h1 className="text-3xl font-extrabold dark:text-sky-700">Welcome</h1>
 
         <div className="space-y-8">
           <Testing />
